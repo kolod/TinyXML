@@ -11,7 +11,7 @@ def req(cmd):
 
 	try:
 		proxies = {
-			"http": 'http://45.82.245.34:3128',
+			"http": 'http://45.82.245.34:3128',  # USA
 		}
 
 		headers = {
@@ -42,7 +42,7 @@ def req(cmd):
 # Prompt user for a number in a given range ----------------------------------
 def getNum(prompt, n):
 	while True:
-		nb = input('Enter ' + prompt + ' 0-' + str(n-1) + ': ')
+		nb = input('Enter {0} 0-{1}: '.format(prompt, n - 1))
 		try:                 x = int(nb)
 		except ValueError:   continue    # Ignore non-numbers
 		if x >= 0 and x < n: return x    # and out-of-range values
